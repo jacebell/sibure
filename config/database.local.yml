@@ -1,0 +1,26 @@
+development: &development
+  adapter: postgresql
+  database: sibure_development
+  username: root
+  password: root 
+  pool: 5
+  timeout: 5000
+
+test:
+  <<: *development
+  database: sibure_test
+
+production: &production
+  adapter: postgresql
+  database: sibure_production
+  pool: 5
+  timeout: 5000
+
+staging:
+  <<: *production
+  database: sibure_staging
+
+integration:
+  <<: *production
+  database: sibure_integration
+
