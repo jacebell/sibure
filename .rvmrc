@@ -1,1 +1,1 @@
-rvm --create ruby-2.0.0@sibure
+rvm --create ruby-2.1.5@sibure
