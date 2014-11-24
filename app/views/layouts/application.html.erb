@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Sibure</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Sibure</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div id="wrapper-bg">
+      <div id="wrapper">
+        <div id="header" class="container">
+          <div id="logo">
+            <h1><a href="#"><span>SIBU</span>RE</a></h1>
+            <h2>Sistema de Busqueda para Reclutamiento</h2>
+          </div>
+          <div id="menu">
+            <ul>
+              <li id='principal'><a href="" accesskey="1"  title="">Principal</a></li>
+              <li id='agregar'  ><a href="" accesskey="2"  title="">Agregar</a></li>
+              <li id='modificar'><a href="" accesskey="3"  title="">Modificar</a></li>
+              <li id='consultar'><a href="" accesskey="4"  title="">Consultar</a></li>
+              <li id='contacto' ><a href="" accesskey="5"  title="">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
 
-<%= yield %>
+        <%= yield %>
 
-</body>
+      </div>
+    </div>
+    <div id="footer_container">
+      <%= render :partial => '/layouts/footer' %>
+    </div>
+  </body>
 </html>
